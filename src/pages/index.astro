@@ -1,49 +1,235 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import Testimonial from "../components/Testimonial.astro";
+import BookingButton from "../components/BookingButton.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1>Relax, Rejuvenate, Restore</h1>
+          <p>
+            Experience the healing power of professional massage therapy with
+            personalized treatments designed to melt away stress and restore
+            balance to your body and mind.
+          </p>
+          <div class="hero-buttons">
+            <BookingButton text="Book Your Session" size="large" />
+            <a href="/services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2>Our Services</h2>
+            <p>
+              Choose from a variety of massage therapies tailored to your
+              specific needs
+            </p>
+          </div>
+          <div class="grid grid-3">
+            <ServiceCard
+              title="Swedish Massage"
+              description="A gentle, relaxing massage that uses long strokes to improve circulation and promote overall relaxation."
+              duration="60/90 min"
+              price="$80/$120"
+              featured={true}
+            />
+            <ServiceCard
+              title="Deep Tissue Massage"
+              description="Targeted pressure to release chronic muscle tension and alleviate deep-seated muscle pain."
+              duration="60/90 min"
+              price="$90/$130"
+            />
+            <ServiceCard
+              title="Hot Stone Therapy"
+              description="Smooth, heated stones are used to warm and relax tight muscles, allowing for deeper work."
+              duration="75/90 min"
+              price="$100/$140"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <a href="/services" class="btn btn-secondary">View All Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="section">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2>Benefits of Massage Therapy</h2>
+            <p>
+              Discover how regular massage can transform your health and
+              well-being
+            </p>
+          </div>
+          <div class="grid grid-2">
+            <div class="benefit-item">
+              <h3>🌿 Stress Reduction</h3>
+              <p>
+                Lower cortisol levels and promote deep relaxation to combat
+                daily stressors.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h3>💪 Pain Relief</h3>
+              <p>
+                Alleviate chronic pain, muscle tension, and discomfort through
+                targeted techniques.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h3>🔄 Improved Circulation</h3>
+              <p>
+                Enhance blood flow to deliver oxygen and nutrients throughout
+                your body.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h3>😴 Better Sleep</h3>
+              <p>
+                Promote restful sleep and help regulate your body's natural
+                sleep cycles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2>What Our Clients Say</h2>
+            <p>
+              Real experiences from real clients who have found relief and
+              relaxation
+            </p>
+          </div>
+          <div class="grid grid-3">
+            <Testimonial
+              name="Sarah Johnson"
+              text="I've been coming to Josta for over a year now, and the difference in my chronic back pain has been remarkable. Her deep tissue technique is exactly what I needed."
+              service="Deep Tissue Massage"
+              date="2 weeks ago"
+            />
+            <Testimonial
+              name="Michael Chen"
+              text="The hot stone therapy was incredible! I felt completely relaxed and the warmth really helped with my shoulder tension. Highly recommend!"
+              service="Hot Stone Therapy"
+              date="1 month ago"
+            />
+            <Testimonial
+              name="Emily Rodriguez"
+              text="As someone who works at a desk all day, the Swedish massage sessions have been a game-changer for my posture and overall well-being."
+              service="Swedish Massage"
+              date="3 weeks ago"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-section text-center">
+            <h2>Ready to Experience the Benefits?</h2>
+            <p>
+              Take the first step toward relaxation and healing. Book your
+              appointment today and discover the transformative power of
+              professional massage therapy.
+            </p>
+            <BookingButton
+              text="Book Your Appointment Now"
+              size="large"
+              variant="secondary"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<style>
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .benefit-item {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .benefit-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: var(--secondary);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .benefit-item {
+      padding: 1.5rem;
+    }
+
+    .cta-section {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

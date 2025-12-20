@@ -1,0 +1,330 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import BookingButton from "../components/BookingButton.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Services - ${SITE_TITLE}`}
+      description={`${SITE_DESCRIPTION} - Professional massage therapy services including Swedish, deep tissue, hot stone, and more.`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Our Massage Services</h1>
+          <p>
+            Discover our range of professional massage therapies designed to
+            address your specific wellness needs and help you achieve optimal
+            health and relaxation.
+          </p>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="grid grid-2">
+            <ServiceCard
+              title="Swedish Massage"
+              description="A gentle, relaxing massage that uses long, flowing strokes to improve circulation, reduce muscle tension, and promote overall relaxation. Perfect for stress relief and those new to massage therapy."
+              duration="60 minutes / 90 minutes"
+              price="$80 / $120"
+            />
+            <ServiceCard
+              title="Deep Tissue Massage"
+              description="Targeted therapy that focuses on realigning deeper layers of muscles and connective tissue. Ideal for chronic aches, pain, and contracted areas such as stiff neck and upper back, low back pain, leg muscle tightness, and sore shoulders."
+              duration="60 minutes / 90 minutes"
+              price="$90 / $130"
+            />
+            <ServiceCard
+              title="Hot Stone Therapy"
+              description="Smooth, heated basalt stones are placed on specific points on your body and used as massage tools. The warmth helps to relax muscles more deeply, allowing for more effective work and increased circulation."
+              duration="75 minutes / 90 minutes"
+              price="$100 / $140"
+            />
+            <ServiceCard
+              title="Sports Massage"
+              description="Designed for athletes and active individuals, this therapy focuses on areas of the body that are overused and stressed from repetitive movements. Helps prevent injuries and enhance performance."
+              duration="60 minutes / 90 minutes"
+              price="$95 / $135"
+            />
+            <ServiceCard
+              title="Pregnancy Massage"
+              description="A gentle, safe massage specifically designed for expectant mothers. Helps alleviate common pregnancy discomforts such as back pain, swelling, and fatigue while promoting relaxation and well-being."
+              duration="60 minutes"
+              price="$85"
+            />
+            <ServiceCard
+              title="Couples Massage"
+              description="Share a relaxing massage experience with your partner, friend, or family member. Two therapists work simultaneously in the same room, providing individualized treatments in a shared space."
+              duration="60 minutes / 90 minutes"
+              price="$160 / $240"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Information -->
+      <section class="section">
+        <div class="container">
+          <div class="pricing-info">
+            <h2>Investment in Your Wellness</h2>
+            <p>
+              Our pricing reflects the quality of care, expertise, and
+              personalized attention you'll receive with every session.
+            </p>
+
+            <div class="pricing-grid">
+              <div class="pricing-item">
+                <h3>Package Deals</h3>
+                <ul>
+                  <li><strong>3 Sessions:</strong> Save 10% on any service</li>
+                  <li><strong>5 Sessions:</strong> Save 15% on any service</li>
+                  <li><strong>10 Sessions:</strong> Save 20% on any service</li>
+                </ul>
+              </div>
+              <div class="pricing-item">
+                <h3>Membership Benefits</h3>
+                <ul>
+                  <li>Monthly 60-minute massage</li>
+                  <li>10% off additional services</li>
+                  <li>Priority booking</li>
+                  <li>Complimentary aromatherapy</li>
+                </ul>
+              </div>
+              <div class="pricing-item">
+                <h3>Gift Certificates</h3>
+                <p>
+                  Give the gift of relaxation! Available in any denomination and
+                  perfect for birthdays, holidays, or special occasions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Expect -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="what-to-expect">
+            <h2>What to Expect</h2>
+            <div class="expectations-grid">
+              <div class="expectation-item">
+                <h3>📋 Initial Consultation</h3>
+                <p>
+                  Your session begins with a brief consultation to discuss your
+                  health history, concerns, and wellness goals.
+                </p>
+              </div>
+              <div class="expectation-item">
+                <h3>👕 Preparation</h3>
+                <p>
+                  You'll have privacy to undress to your comfort level and lie
+                  comfortably on the massage table, draped with sheets.
+                </p>
+              </div>
+              <div class="expectation-item">
+                <h3>👐 Personalized Treatment</h3>
+                <p>
+                  Your therapist will customize pressure and techniques based on
+                  your preferences and needs throughout the session.
+                </p>
+              </div>
+              <div class="expectation-item">
+                <h3>💧 Aftercare Guidance</h3>
+                <p>
+                  Receive recommendations for post-massage care, including
+                  hydration and stretching to extend benefits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-section text-center">
+            <h2>Ready to Begin Your Wellness Journey?</h2>
+            <p>
+              Take the first step toward relaxation and healing. Book your
+              appointment today and experience the transformative power of
+              professional massage therapy.
+            </p>
+            <BookingButton
+              text="Book Your Session Now"
+              size="large"
+              variant="secondary"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-header {
+    background: linear-gradient(
+      135deg,
+      var(--secondary) 0%,
+      var(--primary) 100%
+    );
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .pricing-info {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .pricing-info h2 {
+    margin-bottom: 1rem;
+  }
+
+  .pricing-info p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .pricing-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .pricing-item h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .pricing-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pricing-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    color: var(--text-light);
+  }
+
+  .pricing-item li:last-child {
+    border-bottom: none;
+  }
+
+  .pricing-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .what-to-expect {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .what-to-expect h2 {
+    margin-bottom: 3rem;
+  }
+
+  .expectations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .expectation-item {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .expectation-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .expectation-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: var(--secondary);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 0;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+    }
+
+    .pricing-grid,
+    .expectations-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,347 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Contact & Booking - ${SITE_TITLE}`}
+      description={`${SITE_DESCRIPTION} - Book your massage therapy appointment online or contact us with questions.`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Book Your Appointment</h1>
+          <p>
+            Ready to experience the healing benefits of professional massage
+            therapy? Schedule your session today and take the first step toward
+            relaxation and wellness.
+          </p>
+        </div>
+      </section>
+
+      <!-- Booking Form Section -->
+      <section class="section section-light">
+        <div class="container">
+          <ContactForm />
+        </div>
+      </section>
+
+      <!-- Contact Information -->
+      <section class="section">
+        <div class="container">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+              <div class="contact-item">
+                <h3>📍 Location</h3>
+                <p>
+                  <strong>Josta Raapis-Dingman Massages</strong><br />
+                  123 Wellness Street<br />
+                  Relaxation City, RC 12345<br /><br />
+                  Free parking available on-site<br />
+                  Wheelchair accessible
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h3>📞 Contact Information</h3>
+                <p>
+                  <strong>Phone:</strong> (555) 123-4567<br />
+                  <strong>Email:</strong> info@jostamassage.com<br />
+                  <strong>Website:</strong> www.jostamassage.com<br /><br />
+                  Feel free to call or email with any questions about our services
+                  or to schedule your appointment.
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h3>🕐 Business Hours</h3>
+                <p>
+                  <strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM<br />
+                  <strong>Saturday:</strong> 9:00 AM - 5:00 PM<br />
+                  <strong>Sunday:</strong> 10:00 AM - 4:00 PM<br /><br />
+                  Last appointment scheduled 30 minutes before closing<br />
+                  Emergency appointments may be available
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="map-section">
+            <h2>Find Us</h2>
+            <div class="map-placeholder">
+              <h3>Interactive Map</h3>
+              <p>
+                Google Maps integration would go here<br />
+                Showing location at 123 Wellness Street, Relaxation City, RC 12345
+              </p>
+            </div>
+            <div class="directions">
+              <h3>Directions</h3>
+              <p>
+                <strong>From Downtown:</strong> Take Main Street north, turn right
+                onto Wellness Street. We're located on the left, just past the park.
+              </p>
+              <p>
+                <strong>From Highway 101:</strong> Take Exit 25 toward Relaxation
+                City. Turn left onto Wellness Street and continue for 2 miles.
+              </p>
+              <p>
+                <strong>Public Transit:</strong> Bus Route 15 stops directly in front
+                of our building. The Wellness Street station is a 5-minute walk.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section">
+        <div class="container">
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>What should I expect during my first visit?</h3>
+                <p>
+                  Your first appointment includes a brief consultation to
+                  discuss your health history and wellness goals. We'll review
+                  any areas of concern and create a personalized treatment plan
+                  tailored to your needs.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>How early should I arrive for my appointment?</h3>
+                <p>
+                  Please arrive 10-15 minutes early for your first appointment
+                  to complete necessary paperwork. For return visits, 5 minutes
+                  early is perfect to ensure a relaxed start to your session.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What should I wear during the massage?</h3>
+                <p>
+                  Your comfort is our priority. Most clients undress to their
+                  comfort level and are always draped with sheets throughout the
+                  session. You may wear underwear if you prefer.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Do you accept insurance?</h3>
+                <p>
+                  We don't directly bill insurance, but we can provide detailed
+                  receipts for you to submit to your insurance company for
+                  potential reimbursement. Check with your provider about
+                  coverage.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What forms of payment do you accept?</h3>
+                <p>
+                  We accept cash, credit cards (Visa, Mastercard, American
+                  Express), and HSA/FSA cards. Payment is due at the time of
+                  service.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What if I need to cancel my appointment?</h3>
+                <p>
+                  We require 24-hour notice for cancellations to avoid a
+                  cancellation fee. Late cancellations may be subject to a
+                  charge equal to 50% of the scheduled service.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-header {
+    background: linear-gradient(
+      135deg,
+      var(--secondary) 0%,
+      var(--primary) 100%
+    );
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 3rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .contact-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .contact-item h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .contact-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .map-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .map-section h2 {
+    margin-bottom: 3rem;
+  }
+
+  .map-placeholder {
+    background: var(--gray-light);
+    border: 2px dashed var(--gray-medium);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+  }
+
+  .map-placeholder h3 {
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .directions {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: left;
+  }
+
+  .directions h3 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .directions p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .directions p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .faq-section h2 {
+    margin-bottom: 3rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .faq-item h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .faq-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 0;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+    }
+
+    .contact-grid,
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .map-placeholder {
+      padding: 2rem;
+    }
+
+    .directions {
+      padding: 1.5rem;
+    }
+  }
+</style>

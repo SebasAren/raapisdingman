@@ -1,0 +1,110 @@
+---
+export interface Props {
+  name: string;
+  text: string;
+  rating?: number;
+  service?: string;
+  date?: string;
+}
+
+const { name, text, rating = 5, service, date } = Astro.props;
+---
+
+<div class="testimonial">
+  <div class="testimonial-content">
+    <div class="stars">
+      {
+        Array.from({ length: 5 }).map((_, i) => (
+          <span class={`star ${i < rating ? "filled" : ""}`}>★</span>
+        ))
+      }
+    </div>
+    <p class="testimonial-text">"{text}"</p>
+  </div>
+  <div class="testimonial-author">
+    <div class="author-info">
+      <strong class="author-name">{name}</strong>
+      {service && <span class="service-type">{service}</span>}
+      {date && <span class="date">{date}</span>}
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonial {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .testimonial:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .testimonial-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .stars {
+    margin-bottom: 1rem;
+  }
+
+  .star {
+    color: var(--gray-medium);
+    font-size: 1.2rem;
+    margin-right: 2px;
+  }
+
+  .star.filled {
+    color: #ffd700;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .testimonial-author {
+    border-top: 1px solid var(--gray-light);
+    padding-top: 1rem;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .author-name {
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  .service-type {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .date {
+    color: var(--gray-medium);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial {
+      padding: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+    }
+  }
+</style>
