@@ -14,11 +14,11 @@ const aboutData = aboutContent[0]?.data;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <BaseHead
-      title={`About - ${siteData?.siteTitle || SITE_TITLE}`}
-      description={`${siteData?.siteDescription || SITE_DESCRIPTION} - Learn about ${aboutData?.professionalName || "Josta Raapis-Dingman"}'s professional background, qualifications, and approach to massage therapy.`}
+      title={`Over - ${siteData?.siteTitle || SITE_TITLE}`}
+      description={`${siteData?.siteDescription || SITE_DESCRIPTION} - Leer meer over ${aboutData?.professionalName || "Josta Raapis-Dingman"}'s professionele achtergrond, kwalificaties en benadering van massagetherapie.`}
     />
   </head>
   <body>
@@ -27,10 +27,10 @@ const aboutData = aboutContent[0]?.data;
       <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>About {aboutData?.professionalName || "Josta Raapis-Dingman"}</h1>
+          <h1>Over {aboutData?.professionalName || "Josta Raapis-Dingman"}</h1>
           <p>
-            Dedicated to helping clients achieve optimal wellness through the
-            healing power of therapeutic massage
+            Toegewijd aan het helpen van cliënten om optimale wellness te
+            bereiken door de helende kracht van therapeutische massage
           </p>
         </div>
       </section>
@@ -41,14 +41,14 @@ const aboutData = aboutContent[0]?.data;
           <div class="about-content">
             <div class="about-text">
               <h2>
-                {aboutData?.journeyTitle || "My Journey to Massage Therapy"}
+                {aboutData?.journeyTitle || "Mijn Pad naar Massagetherapie"}
               </h2>
               <p
                 set:html={aboutData?.journeyContent?.replace(
                   /\n\n/g,
                   "</p><p>",
                 ) ||
-                  "My passion for massage therapy began over 15 years ago when I experienced firsthand the transformative power of therapeutic touch following a sports injury. The relief and healing I received inspired me to pursue a career where I could help others experience similar benefits."}
+                  "Mijn passie voor massagetherapie begon meer dan 15 jaar geleden toen ik zelf de transformerende kracht van therapeutische aanraking ervoer na een sportblessure. De verlichting en heling die ik ontving inspireerden mij om een carrière na te jagen waarin ik anderen kon helpen om soortgelijke voordelen te ervaren."}
               />
             </div>
 
@@ -57,13 +57,13 @@ const aboutData = aboutContent[0]?.data;
                 aboutData?.professionalPhoto ? (
                   <img
                     src={aboutData.professionalPhoto.src}
-                    alt={`Professional photo of ${aboutData.professionalName || "Josta Raapis-Dingman"}`}
+                    alt={`Professionele foto van ${aboutData.professionalName || "Josta Raapis-Dingman"}`}
                     class="professional-photo"
                   />
                 ) : (
                   <div class="image-placeholder">
-                    <h3>Professional Photo</h3>
-                    <p>Your professional headshot would go here</p>
+                    <h3>Professionele Foto</h3>
+                    <p>Uw professionele portretfoto zou hier komen</p>
                   </div>
                 )
               }
@@ -76,7 +76,7 @@ const aboutData = aboutContent[0]?.data;
       <section class="section">
         <div class="container">
           <div class="philosophy">
-            <h2>{aboutData?.philosophyTitle || "My Philosophy"}</h2>
+            <h2>{aboutData?.philosophyTitle || "Mijn Filosofie"}</h2>
             <div class="philosophy-grid">
               {
                 aboutData?.philosophyItems?.map((item) => (
@@ -87,14 +87,14 @@ const aboutData = aboutContent[0]?.data;
                 )) ||
                   [
                     {
-                      title: "🌿 Holistic Approach",
+                      title: "🌿 Holistische Benadering",
                       description:
-                        "I view each client as a whole person, considering physical, emotional, and lifestyle factors that contribute to their well-being.",
+                        "Ik zie elke cliënt als een heel persoon, waarbij ik fysieke, emotionele en levensstijlfactoren beschouw die bijdragen aan hun welzijn.",
                     },
                     {
-                      title: "🤝 Client-Centered Care",
+                      title: "🤝 Cliëntgerichte Zorg",
                       description:
-                        "Your comfort and goals are my priority. I take time to listen, understand your concerns, and adjust my techniques.",
+                        "Uw comfort en doelen zijn mijn prioriteit. Ik neem de tijd om te luisteren, uw zorgen te begrijpen en mijn technieken aan te passen.",
                     },
                   ].map((item) => (
                     <div class="philosophy-item">
@@ -112,10 +112,10 @@ const aboutData = aboutContent[0]?.data;
       <section class="section section-light">
         <div class="container">
           <div class="qualifications">
-            <h2>Education & Certifications</h2>
+            <h2>Opleiding & Certificeringen</h2>
             <div class="qualifications-grid">
               <div class="qualification-group">
-                <h3>Education</h3>
+                <h3>Opleiding</h3>
                 <ul>
                   {
                     aboutData?.educationItems?.map((item) => (
@@ -126,13 +126,13 @@ const aboutData = aboutContent[0]?.data;
                     )) ||
                       [
                         {
-                          degree: "Massage Therapy Diploma",
-                          institution: "Wellness Institute",
+                          degree: "Diploma Massagetherapie",
+                          institution: "Wellness Instituut",
                           year: "2008",
                         },
                         {
-                          degree: "Advanced Anatomy & Physiology",
-                          institution: "Health Sciences College",
+                          degree: "Gevorderde Anatomie & Fysiologie",
+                          institution: "Gezondheidswetenschappen College",
                           year: "2010",
                         },
                       ].map((item) => (
@@ -145,7 +145,7 @@ const aboutData = aboutContent[0]?.data;
                 </ul>
               </div>
               <div class="qualification-group">
-                <h3>Certifications</h3>
+                <h3>Certificeringen</h3>
                 <ul>
                   {
                     aboutData?.certificationItems?.map((cert) => (
@@ -154,8 +154,8 @@ const aboutData = aboutContent[0]?.data;
                       </li>
                     )) ||
                       [
-                        "Nationally Certified in Therapeutic Massage (NCTMB)",
-                        "Certified Myofascial Release Practitioner",
+                        "Landelijk Gecertificeerd in Therapeutische Massage (NCTMB)",
+                        "Gecertificeerd Myofasciale Release Praktizijn",
                       ].map((cert) => (
                         <li>
                           <strong>{cert}</strong>
@@ -165,7 +165,7 @@ const aboutData = aboutContent[0]?.data;
                 </ul>
               </div>
               <div class="qualification-group">
-                <h3>Professional Memberships</h3>
+                <h3>Professionele Lidmaatschappen</h3>
                 <ul>
                   {
                     aboutData?.membershipItems?.map((membership) => (
@@ -193,7 +193,7 @@ const aboutData = aboutContent[0]?.data;
       <section class="section">
         <div class="container">
           <div class="specializations">
-            <h2>Areas of Specialization</h2>
+            <h2>Specialisatiegebieden</h2>
             <div class="specializations-grid">
               {
                 aboutData?.specializationItems?.map((item) => (
@@ -204,14 +204,14 @@ const aboutData = aboutContent[0]?.data;
                 )) ||
                   [
                     {
-                      title: "Chronic Pain Management",
+                      title: "Chronische Pijnbestrijding",
                       description:
-                        "Specialized techniques for long-term pain relief, including fibromyalgia, arthritis, and persistent muscle tension.",
+                        "Gespecialiseerde technieken voor langetermijnpijnverlichting, inclusief fibromyalgie, artritis en aanhoudende spierspanning.",
                     },
                     {
-                      title: "Stress & Anxiety Relief",
+                      title: "Stress- & Angstverlichting",
                       description:
-                        "Gentle, calming approaches designed to reduce cortisol levels and promote deep relaxation and mental clarity.",
+                        "Zachte, kalmerende benaderingen ontworpen om cortisolniveaus te verlagen en diepe ontspanning en mentale helderheid te bevorderen.",
                     },
                   ].map((item) => (
                     <div class="specialization-item">
@@ -229,14 +229,14 @@ const aboutData = aboutContent[0]?.data;
       <section class="section">
         <div class="container">
           <div class="cta-section text-center">
-            <h2>Ready to Experience the Difference?</h2>
+            <h2>Klaar om het Verschil te Ervaren?</h2>
             <p>
-              I'm committed to providing you with exceptional care in a
-              comfortable, professional environment. Let's work together to
-              achieve your wellness goals.
+              Ik ben toegewijd aan het bieden van uitzonderlijke zorg in een
+              comfortabele, professionele omgeving. Laten we samenwerken om uw
+              wellnessdoelen te bereiken.
             </p>
             <BookingButton
-              text="Schedule Your Consultation"
+              text="Plan Uw Consultatie"
               size="large"
               variant="secondary"
             />

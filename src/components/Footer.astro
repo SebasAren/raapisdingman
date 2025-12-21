@@ -20,20 +20,20 @@ const sortedNavigation = navigation.sort((a, b) => a.data.order - b.data.order);
         <p>
           {
             siteData?.tagline ||
-              "Professional massage therapy services to help you relax, rejuvenate, and restore balance to your body and mind."
+              "Professionele massagediensten om te helpen ontspannen, verjongen en het evenwicht in lichaam en geest te herstellen."
           }
         </p>
       </div>
 
       <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p><strong>Phone:</strong> {siteData?.phone || "(555) 123-4567"}</p>
+        <h4>Contactgegevens</h4>
+        <p><strong>Telefoon:</strong> {siteData?.phone || "(555) 123-4567"}</p>
         <p>
-          <strong>Email:</strong>
+          <strong>E-mail:</strong>
           {siteData?.email || "info@jostamassage.com"}
         </p>
         <p>
-          <strong>Address:</strong>
+          <strong>Adres:</strong>
           {
             siteData?.address?.replace(/, /g, "<br />") ||
               "123 Wellness Street<br />Relaxation City, RC 12345"
@@ -42,23 +42,23 @@ const sortedNavigation = navigation.sort((a, b) => a.data.order - b.data.order);
       </div>
 
       <div class="footer-section">
-        <h4>Business Hours</h4>
+        <h4>Openingstijden</h4>
         <p>
-          <strong>Monday - Friday:</strong>
-          {siteData?.weekdaysHours || "9:00 AM - 7:00 PM"}
+          <strong>Maandag - Vrijdag:</strong>
+          {siteData?.weekdaysHours || "09:00 - 19:00"}
         </p>
         <p>
-          <strong>Saturday:</strong>
-          {siteData?.saturdayHours || "9:00 AM - 5:00 PM"}
+          <strong>Zaterdag:</strong>
+          {siteData?.saturdayHours || "09:00 - 17:00"}
         </p>
         <p>
-          <strong>Sunday:</strong>
-          {siteData?.sundayHours || "10:00 AM - 4:00 PM"}
+          <strong>Zondag:</strong>
+          {siteData?.sundayHours || "10:00 - 16:00"}
         </p>
       </div>
 
       <div class="footer-section">
-        <h4>Quick Links</h4>
+        <h4>Snelle Links</h4>
         <ul>
           {
             sortedNavigation.map((item) => (
@@ -74,8 +74,8 @@ const sortedNavigation = navigation.sort((a, b) => a.data.order - b.data.order);
     <div class="footer-bottom">
       <p>
         &copy; {today.getFullYear()}
-        {siteData?.businessName || "Josta Raapis-Dingman Massages"}. All rights
-        reserved.
+        {siteData?.businessName || "Josta Raapis-Dingman Massages"}. Alle
+        rechten voorbehouden.
       </p>
     </div>
   </div>

@@ -32,7 +32,7 @@ const featuredTestimonials = testimonials
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <BaseHead
       title={siteData?.siteTitle || SITE_TITLE}
@@ -45,16 +45,18 @@ const featuredTestimonials = testimonials
       <!-- Hero Section -->
       <section class="hero">
         <div class="container">
-          <h1>{siteData?.heroHeadline || "Relax, Rejuvenate, Restore"}</h1>
+          <h1>
+            {siteData?.heroHeadline || "Ontspannen, Verjongen, Herstellen"}
+          </h1>
           <p>
             {
               siteData?.heroDescription ||
-                "Experience the healing power of professional massage therapy with personalized treatments designed to melt away stress and restore balance to your body and mind."
+                "Ervaar de helende kracht van professionele massagetherapie met gepersonaliseerde behandelingen die ontworpen zijn om stress weg te smelten en het evenwicht in lichaam en geest te herstellen."
             }
           </p>
           <div class="hero-buttons">
-            <BookingButton text="Book Your Session" size="large" />
-            <a href="/services" class="btn btn-outline">View Services</a>
+            <BookingButton text="Boek Uw Sessie" size="large" />
+            <a href="/services" class="btn btn-outline">Bekijk Behandelingen</a>
           </div>
         </div>
       </section>
@@ -63,10 +65,10 @@ const featuredTestimonials = testimonials
       <section class="section section-light">
         <div class="container">
           <div class="text-center mb-4">
-            <h2>Our Services</h2>
+            <h2>Onze Behandelingen</h2>
             <p>
-              Choose from a variety of massage therapies tailored to your
-              specific needs
+              Kies uit diverse massagetherapieën die zijn afgestemd op uw
+              specifieke behoeften
             </p>
           </div>
           <div class="grid grid-3">
@@ -83,7 +85,9 @@ const featuredTestimonials = testimonials
             }
           </div>
           <div class="text-center mt-3">
-            <a href="/services" class="btn btn-secondary">View All Services</a>
+            <a href="/services" class="btn btn-secondary"
+              >Bekijk Alle Behandelingen</a
+            >
           </div>
         </div>
       </section>
@@ -92,10 +96,10 @@ const featuredTestimonials = testimonials
       <section class="section">
         <div class="container">
           <div class="text-center mb-4">
-            <h2>Benefits of Massage Therapy</h2>
+            <h2>Voordelen van Massagetherapie</h2>
             <p>
-              Discover how regular massage can transform your health and
-              well-being
+              Ontdek hoe regelmatige massage uw gezondheid en welzijn kan
+              transformeren
             </p>
           </div>
           <div class="grid grid-2">
@@ -115,10 +119,10 @@ const featuredTestimonials = testimonials
       <section class="section section-light">
         <div class="container">
           <div class="text-center mb-4">
-            <h2>What Our Clients Say</h2>
+            <h2>Wat Onze Cliënten Zeggen</h2>
             <p>
-              Real experiences from real clients who have found relief and
-              relaxation
+              Echte ervaringen van echte cliënten die verlichting en ontspanning
+              hebben gevonden
             </p>
           </div>
           <div class="grid grid-3">
@@ -140,14 +144,14 @@ const featuredTestimonials = testimonials
       <section class="section">
         <div class="container">
           <div class="cta-section text-center">
-            <h2>Ready to Experience the Benefits?</h2>
+            <h2>Klaar om de Voordelen te Ervaren?</h2>
             <p>
-              Take the first step toward relaxation and healing. Book your
-              appointment today and discover the transformative power of
-              professional massage therapy.
+              Zet de eerste stap naar ontspanning en heling. Boek vandaag uw
+              afspraak en ontdek de transformerende kracht van professionele
+              massagetherapie.
             </p>
             <BookingButton
-              text="Book Your Appointment Now"
+              text="Boek Nu Uw Afspraak"
               size="large"
               variant="secondary"
             />

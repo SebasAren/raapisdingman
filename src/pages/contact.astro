@@ -14,11 +14,11 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <BaseHead
-      title={`Contact & Booking - ${siteData?.siteTitle || SITE_TITLE}`}
-      description={`${siteData?.siteDescription || SITE_DESCRIPTION} - Book your massage therapy appointment online or contact us with questions.`}
+      title={`Contact & Boeking - ${siteData?.siteTitle || SITE_TITLE}`}
+      description={`${siteData?.siteDescription || SITE_DESCRIPTION} - Boek uw massagetherapie afspraak online of neem contact op met vragen.`}
     />
   </head>
   <body>
@@ -27,11 +27,11 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
       <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>Book Your Appointment</h1>
+          <h1>Boek Uw Afspraak</h1>
           <p>
-            Ready to experience the healing benefits of professional massage
-            therapy? Schedule your session today and take the first step toward
-            relaxation and wellness.
+            Klaar om de helende voordelen van professionele massage therapie te
+            ervaren? Plan vandaag uw sessie en zet de eerste stap naar
+            ontspanning en wellness.
           </p>
         </div>
       </section>
@@ -47,10 +47,10 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
       <section class="section">
         <div class="container">
           <div class="contact-info">
-            <h2>Get in Touch</h2>
+            <h2>Contact Opnemen</h2>
             <div class="contact-grid">
               <div class="contact-item">
-                <h3>📍 Location</h3>
+                <h3>📍 Locatie</h3>
                 <p>
                   <strong
                     >{
@@ -61,41 +61,41 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
                     siteData?.address?.replace(/, /g, "<br />") ||
                       "123 Wellness Street<br />Relaxation City, RC 12345"
                   }<br /><br />
-                  Free parking available on-site<br />
-                  Wheelchair accessible
+                  Gratis parkeergelegenheid ter plaatse<br />
+                  Rolstoeltoegankelijk
                 </p>
               </div>
 
               <div class="contact-item">
-                <h3>📞 Contact Information</h3>
+                <h3>📞 Contactgegevens</h3>
                 <p>
-                  <strong>Phone:</strong>
+                  <strong>Telefoon:</strong>
                   {siteData?.phone || "(555) 123-4567"}<br />
-                  <strong>Email:</strong>
+                  <strong>E-mail:</strong>
                   {siteData?.email || "info@jostamassage.com"}<br />
                   <strong>Website:</strong>
                   {siteData?.website || "www.jostamassage.com"}<br /><br />
-                  Feel free to call or email with any questions about our services
-                  or to schedule your appointment.
+                  Neem gerust telefonisch of per e-mail contact op met vragen over
+                  onze diensten of om uw afspraak te plannen.
                 </p>
               </div>
 
               <div class="contact-item">
-                <h3>🕐 Business Hours</h3>
+                <h3>🕐 Openingstijden</h3>
                 <p>
-                  <strong>Monday - Friday:</strong>
-                  {siteData?.weekdaysHours || "9:00 AM - 7:00 PM"}<br />
-                  <strong>Saturday:</strong>
-                  {siteData?.saturdayHours || "9:00 AM - 5:00 PM"}<br />
-                  <strong>Sunday:</strong>
-                  {siteData?.sundayHours || "10:00 AM - 4:00 PM"}<br /><br />
+                  <strong>Maandag - Vrijdag:</strong>
+                  {siteData?.weekdaysHours || "09:00 - 19:00"}<br />
+                  <strong>Zaterdag:</strong>
+                  {siteData?.saturdayHours || "09:00 - 17:00"}<br />
+                  <strong>Zondag:</strong>
+                  {siteData?.sundayHours || "10:00 - 16:00"}<br /><br />
                   {
                     siteData?.lastAppointmentNote ||
-                      "Last appointment scheduled 30 minutes before closing"
+                      "Laatste afspraak gepland 30 minuten voor sluiting"
                   }<br />
                   {
                     siteData?.emergencyNote ||
-                      "Emergency appointments may be available"
+                      "Spoedafspraken zijn mogelijk beschikbaar"
                   }
                 </p>
               </div>
@@ -108,27 +108,29 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
       <section class="section section-light">
         <div class="container">
           <div class="map-section">
-            <h2>Find Us</h2>
+            <h2>Vind Ons</h2>
             <div class="map-placeholder">
-              <h3>Interactive Map</h3>
+              <h3>Interactieve Kaart</h3>
               <p>
-                Google Maps integration would go here<br />
-                Showing location at 123 Wellness Street, Relaxation City, RC 12345
+                Google Maps integratie zou hier komen<br />
+                Locatie wordt getoond op 123 Wellness Street, Relaxation City, RC
+                12345
               </p>
             </div>
             <div class="directions">
-              <h3>Directions</h3>
+              <h3>Routebeschrijving</h3>
               <p>
-                <strong>From Downtown:</strong> Take Main Street north, turn right
-                onto Wellness Street. We're located on the left, just past the park.
+                <strong>Vanuit Centrum:</strong> Neem de Main Street naar het noorden,
+                sla rechtsaf de Wellness Street in. We zijn gelegen aan de linkerkant,
+                net na het park.
               </p>
               <p>
-                <strong>From Highway 101:</strong> Take Exit 25 toward Relaxation
-                City. Turn left onto Wellness Street and continue for 2 miles.
+                <strong>Vanaf Highway 101:</strong> Neem Afrit 25 richting Relaxation
+                City. Sla linksaf de Wellness Street in en ga 2 mijl door.
               </p>
               <p>
-                <strong>Public Transit:</strong> Bus Route 15 stops directly in front
-                of our building. The Wellness Street station is a 5-minute walk.
+                <strong>Openbaar Vervoer:</strong> Bus Route 15 stopt direct voor
+                ons gebouw. Het Wellness Street station is 5 minuten lopen.
               </p>
             </div>
           </div>
@@ -139,7 +141,7 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
       <section class="section">
         <div class="container">
           <div class="faq-section">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Veelgestelde Vragen</h2>
             <div class="faq-grid">
               {
                 sortedFAQ.map((item) => (
@@ -152,48 +154,51 @@ const sortedFAQ = faq.sort((a, b) => a.data.order - b.data.order);
             </div>
 
             <div class="faq-item">
-              <h3>How early should I arrive for my appointment?</h3>
+              <h3>Hoe vroeg moet ik aanwezig zijn voor mijn afspraak?</h3>
               <p>
-                Please arrive 10-15 minutes early for your first appointment to
-                complete necessary paperwork. For return visits, 5 minutes early
-                is perfect to ensure a relaxed start to your session.
+                Kom 10-15 minuten vroeg voor uw eerste afspraak om benodigd
+                papierwerk te voltooien. Voor terugkerende bezoeken is 5 minuten
+                vroeg perfect om een ontspannen start van uw sessie te
+                garanderen.
               </p>
             </div>
 
             <div class="faq-item">
-              <h3>What should I wear during the massage?</h3>
+              <h3>Wat moet ik dragen tijdens de massage?</h3>
               <p>
-                Your comfort is our priority. Most clients undress to their
-                comfort level and are always draped with sheets throughout the
-                session. You may wear underwear if you prefer.
+                Uw comfort is onze prioriteit. De meeste cliënten kleden zich
+                uit tot hun comfortniveau en worden gedurende de hele sessie
+                altijd bedekt met lakens. U mag ondergoed dragen als u dat
+                liever heeft.
               </p>
             </div>
 
             <div class="faq-item">
-              <h3>Do you accept insurance?</h3>
+              <h3>Accepteren jullie verzekering?</h3>
               <p>
-                We don't directly bill insurance, but we can provide detailed
-                receipts for you to submit to your insurance company for
-                potential reimbursement. Check with your provider about
-                coverage.
+                We declareren niet direct bij verzekering, maar we kunnen
+                gedetailleerde bonnen verstrekken die u kunt indienen bij uw
+                verzekeringsmaatschappij voor mogelijke vergoeding. Vraag bij uw
+                provider na over dekking.
               </p>
             </div>
 
             <div class="faq-item">
-              <h3>What forms of payment do you accept?</h3>
+              <h3>Welke betaalmethoden accepteren jullie?</h3>
               <p>
-                We accept cash, credit cards (Visa, Mastercard, American
-                Express), and HSA/FSA cards. Payment is due at the time of
-                service.
+                We accepteren contant, creditcards (Visa, Mastercard, American
+                Express) en HSA/FSA kaarten. Betaling is verschuldigd op het
+                moment van de dienst.
               </p>
             </div>
 
             <div class="faq-item">
-              <h3>What if I need to cancel my appointment?</h3>
+              <h3>Wat als ik mijn afspraak moet annuleren?</h3>
               <p>
-                We require 24-hour notice for cancellations to avoid a
-                cancellation fee. Late cancellations may be subject to a charge
-                equal to 50% of the scheduled service.
+                We vereisen 24 uur opzegging voor annuleringen om een
+                annuleringskosten te vermijden. Late annuleringen kunnen worden
+                onderworpen aan een kosten gelijk aan 50% van de geplande
+                dienst.
               </p>
             </div>
           </div>

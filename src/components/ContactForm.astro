@@ -4,7 +4,7 @@ export interface Props {
   submitText?: string;
 }
 
-const { title = "Book Your Appointment", submitText = "Send Booking Request" } =
+const { title = "Boek Uw Afspraak", submitText = "Verstuur Boekverzoek" } =
   Astro.props;
 ---
 
@@ -13,72 +13,72 @@ const { title = "Book Your Appointment", submitText = "Send Booking Request" } =
   <form class="contact-form" method="POST" action="/contact">
     <div class="form-row">
       <div class="form-group">
-        <label for="name">Full Name *</label>
+        <label for="name">Volledige Naam *</label>
         <input type="text" id="name" name="name" required />
       </div>
       <div class="form-group">
-        <label for="email">Email Address *</label>
+        <label for="email">E-mailadres *</label>
         <input type="email" id="email" name="email" required />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
-        <label for="phone">Phone Number *</label>
+        <label for="phone">Telefoonnummer *</label>
         <input type="tel" id="phone" name="phone" required />
       </div>
       <div class="form-group">
-        <label for="service">Service Type *</label>
+        <label for="service">Type Behandeling *</label>
         <select id="service" name="service" required>
-          <option value="">Select a service</option>
-          <option value="swedish">Swedish Massage</option>
+          <option value="">Kies een behandeling</option>
+          <option value="swedish">Zweedse Massage</option>
           <option value="deep-tissue">Deep Tissue Massage</option>
-          <option value="hot-stone">Hot Stone Therapy</option>
-          <option value="sports">Sports Massage</option>
-          <option value="pregnancy">Pregnancy Massage</option>
-          <option value="couples">Couples Massage</option>
+          <option value="hot-stone">Hot Stone Therapie</option>
+          <option value="sports">Sportmassage</option>
+          <option value="pregnancy">Zwangerschapsmassage</option>
+          <option value="couples">Koppelmassage</option>
         </select>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
-        <label for="date">Preferred Date *</label>
+        <label for="date">Voorkeursdatum *</label>
         <input type="date" id="date" name="date" required />
       </div>
       <div class="form-group">
-        <label for="time">Preferred Time *</label>
+        <label for="time">Voorkeurstijd *</label>
         <select id="time" name="time" required>
-          <option value="">Select a time</option>
-          <option value="9:00">9:00 AM</option>
-          <option value="10:00">10:00 AM</option>
-          <option value="11:00">11:00 AM</option>
-          <option value="12:00">12:00 PM</option>
-          <option value="13:00">1:00 PM</option>
-          <option value="14:00">2:00 PM</option>
-          <option value="15:00">3:00 PM</option>
-          <option value="16:00">4:00 PM</option>
-          <option value="17:00">5:00 PM</option>
-          <option value="18:00">6:00 PM</option>
+          <option value="">Kies een tijd</option>
+          <option value="9:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
         </select>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="message">Additional Information</label>
+      <label for="message">Aanvullende Informatie</label>
       <textarea
         id="message"
         name="message"
         rows="4"
-        placeholder="Please let us know about any specific needs, health concerns, or preferences..."
+        placeholder="Laat het ons weten als u specifieke behoeften, gezondheidszorgen of voorkeuren heeft..."
       ></textarea>
     </div>
 
     <div class="form-group checkbox-group">
       <input type="checkbox" id="consent" name="consent" required />
       <label for="consent">
-        I agree to be contacted regarding my appointment and understand that
-        this is a booking request, not a confirmed appointment.
+        Ik ga ermee akkoord gecontacteerd te worden over mijn afspraak en
+        begrijp dat dit een boekingsverzoek is, geen bevestigde afspraak.
       </label>
     </div>
 

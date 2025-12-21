@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Josta Raapis-Dingman Massages";
 export const SITE_DESCRIPTION =
-  "Professional massage therapy services offering relaxation, pain relief, and wellness through Swedish, deep tissue, hot stone, and specialized massage treatments.";
+  "Professionele massagetherapie diensten die ontspanning, pijnverlichting en wellness bieden via Zweedse, deep tissue, hot stone en gespecialiseerde massagebehandelingen.";
 
 // Contact Information
 export const CONTACT_INFO = {
@@ -15,9 +15,9 @@ export const CONTACT_INFO = {
 
 // Business Hours
 export const BUSINESS_HOURS = {
-  weekdays: "9:00 AM - 7:00 PM",
-  saturday: "9:00 AM - 5:00 PM",
-  sunday: "10:00 AM - 4:00 PM",
+  weekdays: "09:00 - 19:00",
+  saturday: "09:00 - 17:00",
+  sunday: "10:00 - 16:00",
 };
 
 // Social Media Links

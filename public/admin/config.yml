@@ -8,72 +8,84 @@ media_folder: "src/assets/images" # Location where files will be stored in the r
 public_folder: "src/assets/images" # The src attribute for uploaded media
 collections:
   - name: "siteSettings"
-    label: "Site Settings"
+    label: "Site Instellingen"
     folder: "src/content/site-settings"
     create: false
     fields:
-      - { label: "Site Title", name: "siteTitle", widget: "string" }
-      - { label: "Site Description", name: "siteDescription", widget: "text" }
-      - { label: "Business Name", name: "businessName", widget: "string" }
-      - { label: "Tagline", name: "tagline", widget: "string" }
-      - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
-      - { label: "Hero Description", name: "heroDescription", widget: "text" }
+      - { label: "Site Titel", name: "siteTitle", widget: "string" }
+      - { label: "Site Beschrijving", name: "siteDescription", widget: "text" }
+      - { label: "Bedrijfsnaam", name: "businessName", widget: "string" }
+      - { label: "Slogan", name: "tagline", widget: "string" }
+      - { label: "Hero Kop", name: "heroHeadline", widget: "string" }
+      - { label: "Hero Beschrijving", name: "heroDescription", widget: "text" }
       - {
-          label: "Hero Image",
+          label: "Hero Afbeelding",
           name: "heroImage",
           widget: "image",
           required: false,
         }
-      - { label: "Phone", name: "phone", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Address", name: "address", widget: "text" }
+      - { label: "Telefoon", name: "phone", widget: "string" }
+      - { label: "E-mail", name: "email", widget: "string" }
+      - { label: "Adres", name: "address", widget: "text" }
       - { label: "Website", name: "website", widget: "string" }
-      - { label: "Weekdays Hours", name: "weekdaysHours", widget: "string" }
-      - { label: "Saturday Hours", name: "saturdayHours", widget: "string" }
-      - { label: "Sunday Hours", name: "sundayHours", widget: "string" }
       - {
-          label: "Last Appointment Note",
+          label: "Weekdagen Openingstijden",
+          name: "weekdaysHours",
+          widget: "string",
+        }
+      - {
+          label: "Zaterdag Openingstijden",
+          name: "saturdayHours",
+          widget: "string",
+        }
+      - {
+          label: "Zondag Openingstijden",
+          name: "sundayHours",
+          widget: "string",
+        }
+      - {
+          label: "Laatste Afspraak Notitie",
           name: "lastAppointmentNote",
           widget: "text",
           required: false,
         }
       - {
-          label: "Emergency Note",
+          label: "Spoed Notitie",
           name: "emergencyNote",
           widget: "text",
           required: false,
         }
 
   - name: "services"
-    label: "Services"
+    label: "Behandelingen"
     folder: "src/content/services"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Duration", name: "duration", widget: "string" }
-      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Beschrijving", name: "description", widget: "text" }
+      - { label: "Duur", name: "duration", widget: "string" }
+      - { label: "Prijs", name: "price", widget: "string" }
       - {
-          label: "Featured",
+          label: "Uitgelicht",
           name: "featured",
           widget: "boolean",
           default: false,
         }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Afbeelding", name: "image", widget: "image", required: false }
+      - { label: "Volgorde", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "testimonials"
-    label: "Testimonials"
+    label: "Getuigenissen"
     folder: "src/content/testimonials"
     create: true
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Testimonial", name: "text", widget: "text" }
-      - { label: "Service", name: "service", widget: "string" }
-      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Naam", name: "name", widget: "string" }
+      - { label: "Getuigenis", name: "text", widget: "text" }
+      - { label: "Behandeling", name: "service", widget: "string" }
+      - { label: "Datum", name: "date", widget: "string" }
       - {
-          label: "Rating",
+          label: "Beoordeling",
           name: "rating",
           widget: "number",
           min: 1,
@@ -81,7 +93,7 @@ collections:
           default: 5,
         }
       - {
-          label: "Featured",
+          label: "Uitgelicht",
           name: "featured",
           widget: "boolean",
           default: false,
@@ -89,94 +101,94 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "aboutContent"
-    label: "About Content"
+    label: "Over Content"
     folder: "src/content/about"
     create: false
     fields:
       - {
-          label: "Professional Name",
+          label: "Professionele Naam",
           name: "professionalName",
           widget: "string",
         }
       - {
-          label: "Professional Photo",
+          label: "Professionele Foto",
           name: "professionalPhoto",
           widget: "image",
           required: false,
         }
-      - { label: "Journey Title", name: "journeyTitle", widget: "string" }
-      - { label: "Journey Content", name: "journeyContent", widget: "markdown" }
-      - { label: "Philosophy Title", name: "philosophyTitle", widget: "string" }
-      - label: "Philosophy Items"
+      - { label: "Reis Titel", name: "journeyTitle", widget: "string" }
+      - { label: "Reis Content", name: "journeyContent", widget: "markdown" }
+      - { label: "Filosofie Titel", name: "philosophyTitle", widget: "string" }
+      - label: "Filosofie Items"
         name: "philosophyItems"
         widget: "list"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-      - label: "Education Items"
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschrijving", name: "description", widget: "text" }
+      - label: "Opleiding Items"
         name: "educationItems"
         widget: "list"
         fields:
-          - { label: "Degree", name: "degree", widget: "string" }
-          - { label: "Institution", name: "institution", widget: "string" }
-          - { label: "Year", name: "year", widget: "string" }
-      - label: "Certification Items"
+          - { label: "Diploma", name: "degree", widget: "string" }
+          - { label: "Instituut", name: "institution", widget: "string" }
+          - { label: "Jaar", name: "year", widget: "string" }
+      - label: "Certificering Items"
         name: "certificationItems"
         widget: "list"
         fields:
-          - { label: "Certification", name: "certification", widget: "string" }
-      - label: "Membership Items"
+          - { label: "Certificering", name: "certification", widget: "string" }
+      - label: "Lidmaatschap Items"
         name: "membershipItems"
         widget: "list"
         fields:
-          - { label: "Membership", name: "membership", widget: "string" }
-      - label: "Specialization Items"
+          - { label: "Lidmaatschap", name: "membership", widget: "string" }
+      - label: "Specialisatie Items"
         name: "specializationItems"
         widget: "list"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschrijving", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "benefits"
-    label: "Benefits"
+    label: "Voordelen"
     folder: "src/content/benefits"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Beschrijving", name: "description", widget: "text" }
+      - { label: "Icoon", name: "icon", widget: "string" }
+      - { label: "Volgorde", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "faq"
-    label: "FAQ"
+    label: "Veelgestelde Vragen"
     folder: "src/content/faq"
     create: true
     fields:
-      - { label: "Question", name: "question", widget: "string" }
-      - { label: "Answer", name: "answer", widget: "text" }
+      - { label: "Vraag", name: "question", widget: "string" }
+      - { label: "Antwoord", name: "answer", widget: "text" }
       - {
-          label: "Category",
+          label: "Categorie",
           name: "category",
           widget: "select",
           options: ["general", "booking", "payment", "services"],
         }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Volgorde", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "navigation"
-    label: "Navigation"
+    label: "Navigatie"
     folder: "src/content/navigation"
     create: true
     fields:
       - { label: "Label", name: "label", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
       - {
-          label: "Is Button",
+          label: "Is Knop",
           name: "isButton",
           widget: "boolean",
           default: false,
         }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Volgorde", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
