@@ -170,6 +170,7 @@ const featuredTestimonials = testimonials
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+    overflow: hidden;
   }
 
   .benefit-item {
@@ -214,9 +215,20 @@ const featuredTestimonials = testimonials
       align-items: center;
     }
 
-    .hero-buttons .btn {
+    .hero-buttons .btn,
+    .hero-buttons .booking-btn {
       width: 100%;
       max-width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+
+    .hero-buttons .btn:hover,
+    .hero-buttons .booking-btn:hover {
+      transform: none;
+      box-shadow: 0 4px 15px rgba(0, 128, 128, 0.2);
     }
 
     .benefit-item {
