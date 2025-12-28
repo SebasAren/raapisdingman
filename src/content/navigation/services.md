@@ -1,10 +1,10 @@
 ---
-label: "Services"
+label: "Stoelmassage"
 url: "/services"
 isButton: false
 order: 2
 ---
 
-# Services Navigation
+# Stoelmassage Navigation
 
-Link to services page showing all available massage therapies
+Link to stoelmassage page
