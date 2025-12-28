@@ -39,6 +39,36 @@ collections:
           widget: "text",
           required: false,
         }
+      - {
+          label: "Stoelmassage Titel",
+          name: "stoelmassageTitle",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Stoelmassage Beschrijving",
+          name: "stoelmassageDescription",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Stoelmassage Wat Is",
+          name: "stoelmassageWhatIs",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Stoelmassage Voordelen",
+          name: "stoelmassageBenefits",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Stoelmassage Praktische Info",
+          name: "stoelmassagePracticalInfo",
+          widget: "text",
+          required: false,
+        }
 
   - name: "services"
     label: "Behandelingen"

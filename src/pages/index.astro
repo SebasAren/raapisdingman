@@ -3,22 +3,12 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import Testimonial from "../components/Testimonial.astro";
 import BookingButton from "../components/BookingButton.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { getCollection } from "astro:content";
 
 const siteSettings = await getCollection("siteSettings");
 const siteData = siteSettings[0]?.data;
-
-const services = await getCollection(
-  "services",
-  (entry) => entry.data.featured,
-);
-const featuredServices = services
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3);
 
 const benefits = await getCollection("benefits");
 const sortedBenefits = benefits.sort((a, b) => a.data.order - b.data.order);
@@ -51,32 +41,44 @@ const featuredTestimonials = testimonials
         }
       />
 
-      <!-- Services Overview -->
+      <!-- Stoelmassage Service -->
       <section class="section section-light">
         <div class="container">
           <div class="text-center mb-4">
-            <h2>Onze Behandelingen</h2>
+            <h2>{siteData?.stoelmassageTitle || "Stoelmassage"}</h2>
             <p>
-              Kies uit diverse massagetherapieën die zijn afgestemd op uw
-              specifieke behoeften
+              {siteData?.stoelmassageDescription ||
+                "Ontdek de voordelen van een professionele stoelmassage op locatie"}
             </p>
           </div>
-          <div class="grid grid-3">
-            {
-              featuredServices.map((service) => (
-                <ServiceCard
-                  title={service.data.title}
-                  description={service.data.description}
-                  duration={service.data.duration}
-                  price={service.data.price}
-                  featured={service.data.featured}
-                />
-              ))
-            }
+          <div class="service-detail">
+            <div class="service-content">
+              <h3>Wat is Stoelmassage?</h3>
+              <p>
+                {siteData?.stoelmassageWhatIs ||
+                  "Stoelmassage is een korte, effectieve massagevorm die speciaal is ontwikkeld voor op de werkplek. De massage wordt uitgevoerd op een speciaal ergonomische stoel en richt zich op de rug, schouders, nek en armen - de plekken waar veel stress zich ophoopt."}
+              </p>
+
+              <h3>Voordelen</h3>
+              <p set:html={siteData?.stoelmassageBenefits?.replace(/\n/g, "<br />") ||
+                "Verlichting van nek- en rugklachten<br />Vermindering van stress en spanning<br />Beter doorbloeding<br />Verhoogde productiviteit en concentratie<br />Preventie van RSI-klachten"} />
+
+              <h3>Praktische Informatie</h3>
+              <p>
+                {siteData?.stoelmassagePracticalInfo ||
+                  "Een stoelmassage duurt doorgaans 15 tot 30 minuten en wordt uitgevoerd op uw werkplek. De massage vindt plaats door de kleding heen, waardoor er geen omkleedtijd nodig is. Ideaal voor bedrijven die hun medewerkers willen belonen met een moment van ontspanning."}
+              </p>
+            </div>
+            <div class="service-image">
+              <div class="image-placeholder">
+                <h3>Stoelmassage Afbeelding</h3>
+                <p>Uw stoelmassage afbeelding zou hier komen</p>
+              </div>
+            </div>
           </div>
           <div class="text-center mt-3">
-            <a href="/services" class="btn btn-secondary"
-              >Bekijk Alle Behandelingen</a
+            <a href="/contact" class="btn btn-secondary"
+              >Neem Contact Op</a
             >
           </div>
         </div>
@@ -185,6 +187,44 @@ const featuredTestimonials = testimonials
     margin-bottom: 1.5rem;
   }
 
+  .service-detail {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .service-content h3 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .service-content h3:first-child {
+    margin-top: 0;
+  }
+
+  .service-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .image-placeholder {
+    background: var(--gray-light);
+    border: 2px dashed var(--gray-medium);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+
+  .image-placeholder h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
   .cta-section p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
@@ -195,6 +235,11 @@ const featuredTestimonials = testimonials
   @media (max-width: 768px) {
     .benefit-item {
       padding: 1.5rem;
+    }
+
+    .service-detail {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
     .cta-section {
