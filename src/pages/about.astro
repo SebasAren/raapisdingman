@@ -128,42 +128,6 @@ const aboutData = aboutContent[0]?.data;
         </div>
       </section>
 
-      <!-- Specializations -->
-      <section class="section section-light">
-        <div class="container">
-          <div class="specializations">
-            <h2>Specialisatiegebieden</h2>
-            <div class="specializations-grid">
-              {
-                aboutData?.specializationItems?.map((item) => (
-                  <div class="specialization-item">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                )) ||
-                  [
-                    {
-                      title: "Chronische Pijnbestrijding",
-                      description:
-                        "Gespecialiseerde technieken voor langetermijnpijnverlichting, inclusief fibromyalgie, artritis en aanhoudende spierspanning.",
-                    },
-                    {
-                      title: "Stress- & Angstverlichting",
-                      description:
-                        "Zachte, kalmerende benaderingen ontworpen om cortisolniveaus te verlagen en diepe ontspanning en mentale helderheid te bevorderen.",
-                    },
-                  ].map((item) => (
-                    <div class="specialization-item">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  ))
-              }
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- CTA Section -->
       <section class="section">
         <div class="container">
@@ -234,35 +198,15 @@ const aboutData = aboutContent[0]?.data;
     margin: 0 auto;
   }
 
-  .qualifications h2,
-  .specializations h2 {
+  .qualifications h2 {
     margin-bottom: 3rem;
   }
 
-  .qualifications-grid,
-  .specializations-grid {
+  .qualifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     text-align: left;
-  }
-
-  .specialization-item {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-  }
-
-  .specialization-item h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .specialization-item p {
-    color: var(--text-light);
-    line-height: 1.6;
   }
 
   .qualification-group {
@@ -320,8 +264,7 @@ const aboutData = aboutContent[0]?.data;
       gap: 2rem;
     }
 
-    .qualifications-grid,
-    .specializations-grid {
+    .qualifications-grid {
       grid-template-columns: 1fr;
     }
 
