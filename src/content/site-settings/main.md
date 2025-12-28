@@ -3,7 +3,7 @@ siteTitle: Josta Raapis-Dingman Massages
 siteDescription: Professionele stoelmassage voor effectieve verlichting van nek-, schouder- en rugklachten in slechts 15-30 minuten.
 businessName: Josta Raapis-Dingman Massages
 tagline: Stoelmassage voor bedrijven
-heroHeadline: Ontspan, Verjong, Herstel
+heroHeadline: Stoelmassages voor bedrijven
 heroDescription: Ervaar de helende kracht van professionele stoelmassage die specifiek gericht is op het verlichten van spanning in nek, schouders, rug en armen.
 phone: (555) 123-4567
 email: info@jostamassage.com
