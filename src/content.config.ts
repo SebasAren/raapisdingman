@@ -15,6 +15,7 @@ const siteSettings = defineCollection({
       phone: z.string(),
       email: z.string(),
       website: z.string(),
+      linkedin: z.string().optional(),
       lastAppointmentNote: z.string().optional(),
       emergencyNote: z.string().optional(),
       stoelmassageTitle: z.string().optional(),
