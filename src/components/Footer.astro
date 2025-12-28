@@ -4,12 +4,6 @@ const today = new Date();
 
 const siteSettings = await getCollection("siteSettings");
 const siteData = siteSettings[0]?.data;
-
-const navigation = await getCollection(
-  "navigation",
-  (entry) => entry.data.order,
-);
-const sortedNavigation = navigation.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <footer>
@@ -32,42 +26,6 @@ const sortedNavigation = navigation.sort((a, b) => a.data.order - b.data.order);
           <strong>E-mail:</strong>
           {siteData?.email || "info@jostamassage.com"}
         </p>
-        <p>
-          <strong>Adres:</strong>
-          {
-            siteData?.address?.replace(/, /g, "<br />") ||
-              "123 Wellness Street<br />Relaxation City, RC 12345"
-          }
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Openingstijden</h4>
-        <p>
-          <strong>Maandag - Vrijdag:</strong>
-          {siteData?.weekdaysHours || "09:00 - 19:00"}
-        </p>
-        <p>
-          <strong>Zaterdag:</strong>
-          {siteData?.saturdayHours || "09:00 - 17:00"}
-        </p>
-        <p>
-          <strong>Zondag:</strong>
-          {siteData?.sundayHours || "10:00 - 16:00"}
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Snelle Links</h4>
-        <ul>
-          {
-            sortedNavigation.map((item) => (
-              <li>
-                <a href={item.data.url}>{item.data.label}</a>
-              </li>
-            ))
-          }
-        </ul>
       </div>
     </div>
 
