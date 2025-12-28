@@ -28,6 +28,12 @@ collections:
       - { label: "E-mail", name: "email", widget: "string" }
       - { label: "Website", name: "website", widget: "string" }
       - {
+          label: "LinkedIn",
+          name: "linkedin",
+          widget: "string",
+          required: false,
+        }
+      - {
           label: "Laatste Afspraak Notitie",
           name: "lastAppointmentNote",
           widget: "text",
