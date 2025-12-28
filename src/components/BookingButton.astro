@@ -1,0 +1,66 @@
+---
+interface Props {
+  text: string;
+  size?: string;
+  variant?: string;
+}
+
+const { text, size = "medium", variant = "primary" } = Astro.props;
+---
+
+<a
+  href="/contact"
+  class={`btn btn-${variant} btn-${size}`}
+  rel="noopener noreferrer"
+>
+  {text}
+</a>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: var(--secondary);
+    color: var(--white);
+  }
+
+  .btn-secondary:hover {
+    background: var(--secondary-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-medium {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+</style>
