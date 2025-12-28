@@ -17,6 +17,11 @@ const siteSettings = defineCollection({
       website: z.string(),
       lastAppointmentNote: z.string().optional(),
       emergencyNote: z.string().optional(),
+      stoelmassageTitle: z.string().optional(),
+      stoelmassageDescription: z.string().optional(),
+      stoelmassageWhatIs: z.string().optional(),
+      stoelmassageBenefits: z.string().optional(),
+      stoelmassagePracticalInfo: z.string().optional(),
     }),
 });
 
