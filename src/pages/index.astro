@@ -105,30 +105,32 @@ const featuredTestimonials = testimonials
         </div>
       </section>
 
-      <!-- Testimonials -->
-      <section class="section section-light">
-        <div class="container">
-          <div class="text-center mb-4">
-            <h2>Wat Onze Cliënten Zeggen</h2>
-            <p>
-              Echte ervaringen van echte cliënten die verlichting en ontspanning
-              hebben gevonden
-            </p>
+      {featuredTestimonials.length > 0 && (
+        <!-- Testimonials -->
+        <section class="section section-light">
+          <div class="container">
+            <div class="text-center mb-4">
+              <h2>Wat Onze Cliënten Zeggen</h2>
+              <p>
+                Echte ervaringen van echte cliënten die verlichting en ontspanning
+                hebben gevonden
+              </p>
+            </div>
+            <div class="grid grid-3">
+              {
+                featuredTestimonials.map((testimonial) => (
+                  <Testimonial
+                    name={testimonial.data.name}
+                    text={testimonial.data.text}
+                    service={testimonial.data.service}
+                    date={testimonial.data.date}
+                  />
+                ))
+              }
+            </div>
           </div>
-          <div class="grid grid-3">
-            {
-              featuredTestimonials.map((testimonial) => (
-                <Testimonial
-                  name={testimonial.data.name}
-                  text={testimonial.data.text}
-                  service={testimonial.data.service}
-                  date={testimonial.data.date}
-                />
-              ))
-            }
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <!-- CTA Section -->
       <section class="section">
