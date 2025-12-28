@@ -67,44 +67,8 @@ const aboutData = aboutContent[0]?.data;
         </div>
       </section>
 
-      <!-- Philosophy -->
-      <section class="section">
-        <div class="container">
-          <div class="philosophy">
-            <h2>{aboutData?.philosophyTitle || "Mijn Filosofie"}</h2>
-            <div class="philosophy-grid">
-              {
-                aboutData?.philosophyItems?.map((item) => (
-                  <div class="philosophy-item">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                )) ||
-                  [
-                    {
-                      title: "🌿 Holistische Benadering",
-                      description:
-                        "Ik zie elke cliënt als een heel persoon, waarbij ik fysieke, emotionele en levensstijlfactoren beschouw die bijdragen aan hun welzijn.",
-                    },
-                    {
-                      title: "🤝 Cliëntgerichte Zorg",
-                      description:
-                        "Uw comfort en doelen zijn mijn prioriteit. Ik neem de tijd om te luisteren, uw zorgen te begrijpen en mijn technieken aan te passen.",
-                    },
-                  ].map((item) => (
-                    <div class="philosophy-item">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  ))
-              }
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Qualifications -->
-      <section class="section section-light">
+      <section class="section">
         <div class="container">
           <div class="qualifications">
             <h2>Opleiding & Certificeringen</h2>
@@ -159,33 +123,13 @@ const aboutData = aboutContent[0]?.data;
                   }
                 </ul>
               </div>
-              <div class="qualification-group">
-                <h3>Professionele Lidmaatschappen</h3>
-                <ul>
-                  {
-                    aboutData?.membershipItems?.map((membership) => (
-                      <li>
-                        <strong>{membership.membership}</strong>
-                      </li>
-                    )) ||
-                      [
-                        "American Massage Therapy Association (AMTA)",
-                        "Associated Bodywork & Massage Professionals (ABMP)",
-                      ].map((membership) => (
-                        <li>
-                          <strong>{membership}</strong>
-                        </li>
-                      ))
-                  }
-                </ul>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Specializations -->
-      <section class="section">
+      <section class="section section-light">
         <div class="container">
           <div class="specializations">
             <h2>Specialisatiegebieden</h2>
@@ -224,14 +168,13 @@ const aboutData = aboutContent[0]?.data;
       <section class="section">
         <div class="container">
           <div class="cta-section text-center">
-            <h2>Klaar om het Verschil te Ervaren?</h2>
+            <h2>{aboutData?.ctaTitle || "Klaar om het Verschil te Ervaren?"}</h2>
             <p>
-              Ik ben toegewijd aan het bieden van uitzonderlijke zorg in een
-              comfortabele, professionele omgeving. Laten we samenwerken om uw
-              wellnessdoelen te bereiken.
+              {aboutData?.ctaDescription ||
+                "Ik ben toegewijd aan het bieden van uitzonderlijke zorg in een comfortabele, professionele omgeving. Laten we samenwerken om uw wellnessdoelen te bereiken."}
             </p>
             <BookingButton
-              text="Plan Uw Consultatie"
+              text={aboutData?.ctaButtonText || "Plan Uw Consultatie"}
               size="large"
               variant="secondary"
             />
@@ -284,7 +227,6 @@ const aboutData = aboutContent[0]?.data;
     box-shadow: var(--shadow);
   }
 
-  .philosophy,
   .qualifications,
   .specializations {
     text-align: center;
@@ -292,13 +234,11 @@ const aboutData = aboutContent[0]?.data;
     margin: 0 auto;
   }
 
-  .philosophy h2,
   .qualifications h2,
   .specializations h2 {
     margin-bottom: 3rem;
   }
 
-  .philosophy-grid,
   .qualifications-grid,
   .specializations-grid {
     display: grid;
@@ -307,7 +247,6 @@ const aboutData = aboutContent[0]?.data;
     text-align: left;
   }
 
-  .philosophy-item,
   .specialization-item {
     background: var(--white);
     padding: 2rem;
@@ -315,14 +254,12 @@ const aboutData = aboutContent[0]?.data;
     box-shadow: var(--shadow);
   }
 
-  .philosophy-item h3,
   .specialization-item h3 {
     color: var(--accent);
     margin-bottom: 1rem;
     font-size: 1.2rem;
   }
 
-  .philosophy-item p,
   .specialization-item p {
     color: var(--text-light);
     line-height: 1.6;
@@ -383,7 +320,6 @@ const aboutData = aboutContent[0]?.data;
       gap: 2rem;
     }
 
-    .philosophy-grid,
     .qualifications-grid,
     .specializations-grid {
       grid-template-columns: 1fr;
