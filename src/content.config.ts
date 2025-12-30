@@ -26,20 +26,6 @@ const siteSettings = defineCollection({
     }),
 });
 
-const services = defineCollection({
-  loader: glob({ base: "./src/content/services", pattern: "**/*.md" }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      description: z.string(),
-      duration: z.string(),
-      price: z.string(),
-      featured: z.boolean().default(false),
-      image: image().optional(),
-      order: z.number().default(0),
-    }),
-});
-
 const testimonials = defineCollection({
   loader: glob({ base: "./src/content/testimonials", pattern: "**/*.md" }),
   schema: z.object({
@@ -106,16 +92,6 @@ const benefits = defineCollection({
   }),
 });
 
-const faq = defineCollection({
-  loader: glob({ base: "./src/content/faq", pattern: "**/*.md" }),
-  schema: z.object({
-    question: z.string(),
-    answer: z.string(),
-    category: z.enum(["general", "booking", "payment", "services"]),
-    order: z.number().default(0),
-  }),
-});
-
 const navigation = defineCollection({
   loader: glob({ base: "./src/content/navigation", pattern: "**/*.md" }),
   schema: z.object({
@@ -128,10 +104,8 @@ const navigation = defineCollection({
 
 export const collections = {
   siteSettings,
-  services,
   testimonials,
   aboutContent,
   benefits,
-  faq,
   navigation,
 };
