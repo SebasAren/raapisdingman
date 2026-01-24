@@ -9,7 +9,7 @@ export const SITE_DESCRIPTION =
 export const CONTACT_INFO = {
   phone: "(555) 123-4567",
   email: "info@stoelmassagebyjosta.nl",
-  address: "123 Wellness Street, Relaxation City, RC 12345",
+  address: "Amsterdam en Amstelveen",
   website: "www.stoelmassagebyjosta.nl",
 };
 
