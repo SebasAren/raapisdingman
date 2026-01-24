@@ -7,5 +7,12 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://stoelmassagebyjosta.nl",
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => {
+        return page !== "/admin" && page !== "/admin/";
+      },
+    }),
+  ],
 });

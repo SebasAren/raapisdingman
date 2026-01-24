@@ -121,6 +121,15 @@ const navigation = defineCollection({
   }),
 });
 
+const blog = defineCollection({
+  loader: glob({ base: "./src/content/blog", pattern: "**/*.md" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+  }),
+});
+
 export const collections = {
   siteSettings,
   heroContent,
@@ -130,4 +139,5 @@ export const collections = {
   aboutContent,
   benefits,
   navigation,
+  blog,
 };
