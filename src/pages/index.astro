@@ -35,10 +35,11 @@ const featuredTestimonials = testimonials
       title={siteData?.siteTitle || SITE_TITLE}
       description={siteData?.siteDescription || SITE_DESCRIPTION}
     />
+    <link rel="alternate" type="application/rss+xml" title="Stoelmassage by Josta RSS Feed" href="/rss.xml" />
   </head>
   <body>
     <Header />
-    <main>
+    <main id="main">
       <Hero
         title={heroData?.headline || "Ontspannen, Verjongen, Herstellen"}
         subtitle="📍 Professionele stoelmassage in Amsterdam en Amstelveen"
@@ -78,7 +79,7 @@ const featuredTestimonials = testimonials
             </div>
             <div class="service-image">
               <div class="image-placeholder">
-                <h3>Stoelmassage Afbeelding</h3>
+                <p class="image-placeholder-text">Stoelmassage Afbeelding</p>
                 <p>Uw stoelmassage afbeelding zou hier komen</p>
               </div>
             </div>
@@ -110,7 +111,6 @@ const featuredTestimonials = testimonials
       </section>
 
       {featuredTestimonials.length > 0 && (
-        <!-- Testimonials -->
         <section class="section section-light">
           <div class="container">
             <div class="text-center mb-4">
